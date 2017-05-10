@@ -1,0 +1,132 @@
+------ Version 6.5 -----
+Updated 16/03/2017 by Wayne Briggs
+
+Added feature - Second marker can now be stretched out in front of the bird to gauge direction.
+Added feature - Flight height by reflection now added to module.
+Bug fix - Brightness now stays the same after a bird is marked and does not reset.
+
+------ Version 6.4 -----
+Updated 08/03/2017 by Wayne Briggs
+
+Bug fix - Changed the marker selection from a left and a right click, to a left click and a left click while holding shift button.
+Bug fix - Stopped the bird line marker from laying multiple markers on left click.
+
+------ Version 6.4 -----
+Updated 06/03/2017 by Wayne Briggs
+
+Bug fix - Fixed auto next frame and auto pan selection and auto zoom deselection.
+Added feature - List now auto updates and removes measured birds. 
+
+------ Version 6.2 -----
+Updated 06/02/2017 by Wayne Briggs
+
+Bug fix - Further changes to remove 'Not Done', and error code birds from the list when opening a excel file.
+Added feature - New line for marking bird and judging direction.
+
+------ Version 6.1 -----
+Updated 29/10/2015 by Martin Elgie
+
+Bug fix - bird's marked as 'Not Done' were being reset upon reload
+Added feature - bird's marked as 'Not Possible' will be displayed on reload
+
+------ Version 6.0 -----
+Updated 01/09/2015 by Martin Elgie
+
+Added settings feature and various coding streamlines
+
+------ Version 5.6 -----
+Updated 24/08/2015 by Martin Elgie
+
+Wrote and implemented in-module user guide
+Updated label & copyright to reflect this version
+
+------ Version 5.5 -----
+Updated 24/07/2015 by Martin Elgie
+
+Bug fix - module will no longer give errors when re-loading a spreadsheet with
+            no data recorded
+Updated label & copywrite to reflect this version
+
+------ Version 5.4 -----
+Updated 10/07/2015 by Martin Elgie
+
+Bug fix - when filtering out birds, information will no longer overwrite
+            existing data
+Added feature - confirmation dialogues will now have 'Accept' or 'Confirm'
+        as defaults for pressing enter
+Added integrity check for saved bird data
+Updated label & copywrite to reflect this version
+
+------ Version 5.3 -----
+Updated 25/06/2015 by Martin Elgie
+
+Added feature - zoom will remain when when selecting a new frame
+Added feature - pan will remain active while marking a bird
+Added feature - option to automatically jump to next frame after marking 
+    a bird
+Added error message - marking a bird without one selected
+Updated label & copywrite to reflect this version
+
+------ Version 5.2 -----
+Updated 23/06/2015 by Martin Elgie
+
+Bug fix - module will no longer enter an infinite loop when reopened if 
+    skipping certain birds
+Bug fix - reopening the module will longer cause marked birds to be displayed
+    when skipping birds
+Updated label & copywrite to reflect this version
+
+------ Version 5.1 -----
+Updated 16/06/2015 by Martin Elgie
+
+Added extra reason for marking 'Not Possible'
+Added capability to mark birds 'Not Done'
+Updated label & copywrite to reflect this version
+
+------ Version 5.0 -----
+Updated 09/06/2015 by Martin Elgie
+
+Version of module used is now written to each bird in structure for backwards compatability
+Aspect ratio of image is now locked whenever an image is displayed
+Bug fix - image will now display the right way around (not flipped and rotated)
+Display image code is now a separate function, not duplicated in various sections of the main file
+User will be asked for reasons when marking birds 'No Possible'
+Error codes are now assigned to birds that cannot be marked
+Deleted old/unused/obsolete code files
+Added HiDef icon to GUI
+Updated to next major version for release to licensees
+Updated label & copywrite to reflect this version
+
+------ Version 4.1 -----
+Updated 05/12/2014 by Rhys Hexter
+
+Bug fix - input_push now has brightness defined
+Updated label & copywrite to reflect this version
+
+------ Version 4.0 -----
+Updated 30/10/2014 by Rhys Hexter
+
+Fixed Reset Bird Issues - Re-activated button
+If user is not happy with marks for head and tail of birds and select no at question - marks are now removed from overview
+Updated label & copywrite to reflect this version
+
+------ Version 3.3 -----
+Updated 15/10/2014 by Rhys Hexter
+
+Set to use frame number and row number of bird concated if there is no marker number
+Updated to check that all birds have reel name, frame number, marker number and possible fields
+Optimised some code elements
+Updated label & copywrite to reflect this version
+
+------ Version 3.2 -----
+Updated 23/09/2014 by Rhys Hexter
+
+Bug fix - check of marker number works for none when other birds are present on same frame
+Updated label & copywrite to reflect this version
+
+------ Version 3.1 -----
+Updated 28/05/2014 by Rhys Hexter
+
+Set "Reset Bird" button to inactive while bug is fixed
+Changed syntax for spreadsheet read to use '1' instead of 'Data' for sheet ID
+Updated label & copywrite to reflect this version

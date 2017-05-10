@@ -1,0 +1,68 @@
+******************************************************************
+              Bird Height Analysis Module Guide     
+******************************************************************
+
+# Overview #
+Users mark birds loaded into this module so that the next module can
+calculate their heights.
+
+# Input fields #
+The 'Bird Spreadsheet' is the spreadsheet located in the Bird Height
+directory that contains the birds to be analysed. Its name follows
+the format of 'Zone01_M01_S01_D01_C1_15_BH_Process'.
+
+The 'SEQ' input is the .seq file for the next bird to be marked.
+This should be loaded after the appropriate spreadsheet.
+
+# Module function #
+To start, load the bird spreadsheet. All flying birds to be marked
+will now appear in the table in the top right of the module. Look at
+the Reel Name field for the first bird to be marked, and load the 
+appropriate sequence file for this reel. Once the reel is loaded
+click the frame number in the table to go to that part of the .seq
+file.
+
+If the image is too dark to see clearly you can adjust it from the 
+'Brightness' menu in the top left. Birds can be zoomed in and out
+on using the zoom toggle buttons in the top left toolbar, and the
+image can be panned around while zoomed in using the pan button.
+
+For a selected bird use the 'Next' and 'Previous' frame selection
+buttons to find the first frame the flying bird appears on. From 
+this first frame, zoom in until you can clearly see head and tail,
+then click 'Mark Bird'. The mouse will change to allow you to mark
+two points on the image. You can mark either the head or tail first,
+as long as you remain consistent for every frame of the bird.
+
+Use mouse left click to place first marker, and then 
+mouse left click while holding the shift key to place second marker.
+
+The second marker can be placed any distance in front of the bird, 
+and is only to gauge the flight direction.
+
+If the bird has a reflection, then the bird can be marked using the 
+reflection method. To do this just click the reflection button on 
+the bird you wish to mark, and first select a point on the bird, 
+and left click, and then select the same point on the reflection 
+and left click. There is no need to click run translation 
+the mark points will be automattically saved after you have clicked 
+accept to the inputs. This method only requires marking a bird in 1 frame. 
+
+Once the head and tail have been marked, move onto the next frame 
+(you can do this automatically by toggling the green arrow in the
+top left) and locate the bird's new position. Mark it again on this
+frame. Continue until the last frame the bird appears on. Once the
+last frame has been marked, click 'Run Translation'. The 'Completed'
+column in the table will chance from 'No' to 'Yes', and you can now
+procede to the next bird. Be sure to check the Reel Name first.
+
+If you make a mistake when marking a bird, you can click 'Reset Bird'
+with that bird selected in the table. If you are unsure which frames
+you have already marked, you can click 'Display Markers' to see 
+previously marked birds.
+
+If it is not possible to mark a bird for any reason, click 'Not 
+Possible'. You will be asked to give a reason so the appropriate 
+error code can be assigned. Birds can also be marked as 'Not Done'
+by click thing 'Not Done' button.
+_____________________________________

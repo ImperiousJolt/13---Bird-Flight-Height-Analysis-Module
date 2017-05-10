@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment-project plugin="plugin.deploytool" plugin-version="1.0">
+  <configuration target="target.standalone" target-name="Console Application" name="Bird_Flight_Height_Analysis_Module" location="R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Source Code\Current Editables" file="R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Source Code\Current Editables\Bird_Flight_Height_Analysis_Module.prj" preferred-package-type="package.type.exe" build-checksum="2946335544" preferred-package-location="R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module">
+    <param.project.name>R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Source Code\Current Editables\Bird_Flight_Height_Analysis_Module.prj</param.project.name>
+    <param.target.type>Console Application</param.target.type>
+    <param.appname>Bird_Flight_Height_Analysis_Module</param.appname>
+    <param.intermediate>R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Compiled Programs\Source</param.intermediate>
+    <param.output>R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Compiled Programs\Distributables</param.output>
+    <param.embed.ctf>true</param.embed.ctf>
+    <param.tbx_on_path>
+      <item>none</item>
+    </param.tbx_on_path>
+    <param.warnings>
+      <warning.fullpath>on</warning.fullpath>
+      <warning.duplicate>on</warning.duplicate>
+      <warning.option.ignored>on</warning.option.ignored>
+      <warning.libname>on</warning.libname>
+      <warning.demo>on</warning.demo>
+    </param.warnings>
+    <param.version>1.0</param.version>
+    <param.user.only.registration>false</param.user.only.registration>
+    <param.c.cpp.options.file />
+    <param.include.dirs>
+      <file>${PROJECT_ROOT}\SEQRead</file>
+    </param.include.dirs>
+    <param.lib.dirs />
+    <param.lib.files />
+    <param.defines />
+    <param.undefines />
+    <param.debug>false</param.debug>
+    <param.share.mcr>false</param.share.mcr>
+    <param.disable.jvm>false</param.disable.jvm>
+    <param.disable.display>false</param.disable.display>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.user.defined.mcr.options />
+    <unset>
+      <param.project.name />
+      <param.target.type />
+      <param.appname />
+      <param.embed.ctf />
+      <param.warnings />
+      <param.version />
+      <param.user.only.registration />
+      <param.c.cpp.options.file />
+      <param.lib.dirs />
+      <param.lib.files />
+      <param.defines />
+      <param.undefines />
+      <param.debug />
+      <param.share.mcr />
+      <param.disable.jvm />
+      <param.disable.display />
+      <param.create.log />
+      <param.log.file />
+      <param.user.defined.mcr.options />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\Bird_Height_GUI.m</file>
+    </fileset.main>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\bird_height5.m</file>
+      <file>${PROJECT_ROOT}\Bird_Height_GUI.fig</file>
+      <file>${PROJECT_ROOT}\bird_loc_input.m</file>
+      <file>${PROJECT_ROOT}\calculate_height.m</file>
+      <file>${PROJECT_ROOT}\change_log.txt</file>
+      <file>${PROJECT_ROOT}\ConfirmHeadTail.fig</file>
+      <file>${PROJECT_ROOT}\ConfirmHeadTail.m</file>
+      <file>${PROJECT_ROOT}\ConfirmNextBird.fig</file>
+      <file>${PROJECT_ROOT}\ConfirmNextBird.m</file>
+      <file>${PROJECT_ROOT}\ConfirmResetBird.fig</file>
+      <file>${PROJECT_ROOT}\ConfirmResetBird.m</file>
+      <file>${PROJECT_ROOT}\GetSeqInfo.m</file>
+      <file>${PROJECT_ROOT}\getVb.m</file>
+      <file>${PROJECT_ROOT}\height_bootstrap.m</file>
+      <file>${PROJECT_ROOT}\height_bootstrap_bands.m</file>
+      <file>${PROJECT_ROOT}\process_height_data.m</file>
+      <file>${PROJECT_ROOT}\process_height_data_bands.m</file>
+      <file>${PROJECT_ROOT}\reel_track.m</file>
+      <file>${PROJECT_ROOT}\reel_track_compressed.m</file>
+      <file>${PROJECT_ROOT}\seqdefault.m</file>
+      <file>${PROJECT_ROOT}\seqimageread4.m</file>
+      <file>${PROJECT_ROOT}\seqimagereadgrey.m</file>
+      <file>${PROJECT_ROOT}\seqopen.m</file>
+      <file>${PROJECT_ROOT}\SEQRead</file>
+      <file>${PROJECT_ROOT}\seqread.m</file>
+      <file>${PROJECT_ROOT}\SEQReadB.m</file>
+      <file>${PROJECT_ROOT}\SEQReadBGR.m</file>
+      <file>${PROJECT_ROOT}\SetBands.fig</file>
+      <file>${PROJECT_ROOT}\SetBands.m</file>
+      <file>${PROJECT_ROOT}\TranslationCheck.m</file>
+      <file>${PROJECT_ROOT}\Vg_length.m</file>
+      <file>${PROJECT_ROOT}\vignette_filter.m</file>
+    </fileset.resources>
+    <fileset.package>
+      <file>${PROJECT_ROOT}\change_log.txt</file>
+    </fileset.package>
+    <build-deliverables>
+      <file name="Bird_Flight_Height_Analysis_Module.exe" location="R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Compiled Programs\Distributables" optional="false">R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Compiled Programs\Distributables\Bird_Flight_Height_Analysis_Module.exe</file>
+      <file name="readme.txt" location="R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Compiled Programs\Distributables" optional="true">R:\Overhead\HA16000 - Software\13 - Bird Flight Height Analysis Module\Compiled Programs\Distributables\readme.txt</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2012b</root>
+      <path>
+        <directory>C:\Users\hexterr\Documents\MATLAB</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\demos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\graph2d</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\graph3d</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\graphics</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\plottools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\scribe</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\specgraph</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\uitools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\local</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\optimfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\codetools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\datafun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\datamanager</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\datatypes</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\elfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\elmat</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\funfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\general</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\guide</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\helptools</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\iofun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\lang</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\matfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\ops</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\polyfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\randfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\sparfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\specfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\strfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\timefun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\verctrl</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\winfun</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\winfun\NET</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\apps</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\audiovideo</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\comparisons</directory>
+        <directory>${MATLAB_ROOT}\toolbox\compiler</directory>
+        <directory>${MATLAB_ROOT}\toolbox\compiler\compilerdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\geoweb\geoweb</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\imagesci</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\instrument</directory>
+        <directory>${MATLAB_ROOT}\toolbox\map\map</directory>
+        <directory>${MATLAB_ROOT}\toolbox\map\mapgeodesy</directory>
+        <directory>${MATLAB_ROOT}\toolbox\map\mapdisp</directory>
+        <directory>${MATLAB_ROOT}\toolbox\map\mapformats</directory>
+        <directory>${MATLAB_ROOT}\toolbox\map\mapproj</directory>
+        <directory>${MATLAB_ROOT}\toolbox\map\mapdata</directory>
+        <directory>${MATLAB_ROOT}\toolbox\map\mapdata\sdts</directory>
+        <directory>${MATLAB_ROOT}\toolbox\map\mapdemos</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\asynciolib</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\coder\coder</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\controllib\general</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\controllib\graphics</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\controllib\graphics\utils</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\controllib\graphics\plotoptions</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\imageslib</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\mapgeodesy</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\maputils</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\multimedia</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\rptgen</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\testmeaslib\general</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\testmeaslib\graphics</directory>
+        <directory>${MATLAB_ROOT}\toolbox\shared\simulink</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\system</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\timeseries</directory>
+        <directory>${MATLAB_ROOT}\toolbox\matlab\hds</directory>
+      </path>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.1</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
+
