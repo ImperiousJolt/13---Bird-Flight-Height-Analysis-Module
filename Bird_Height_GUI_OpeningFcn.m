@@ -13,7 +13,7 @@ guidata(hObject, handles);
 
 % Set the name, version number and date
 moduleName = 'Bird Flight Height Analysis Module';
-moduleVersion = '6.6';
+moduleVersion = '7.0';
 versionDate = 'July 2017';
 
 % Update window name, in-app name and copyright date
