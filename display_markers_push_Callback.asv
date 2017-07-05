@@ -11,8 +11,8 @@ for b = 1:length(Birds)
             if(Birds{b}.markedByReflection == true)
                 % Plot markers
                 hold on;
-                scatter(Birds{b}.points(1,1),Birds{b}.points(1,2),'og');
-                scatter(Birds{b}.points(2,1),Birds{b}.points(2,2),'or');
+                scatter(Birds{b}.points{1,1},Birds{b}.points{1,2},'og');
+                scatter(Birds{b}.points{2,1},Birds{b}.points{2,2},'or');
             end
             
             for n = 1:length(Birds{b}.Frame)

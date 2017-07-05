@@ -50,7 +50,7 @@ else
         zoneCheck = birdsList.zone;
         bhList = birdsList.bhList;
         if strcmp(xlsfilename(5:6),zoneCheck)
-            useList = true;
+            useList = false;
         else
             useList = false;
         end

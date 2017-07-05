@@ -1,3 +1,9 @@
+------ Version 7.0 -----
+Updated 05/07/2017 by Wayne Briggs
+
+Bug fix - Removed BirdList feature which was filtering birds.
+Bug fix - Now birds marked by reflection will have markers that can be displayed when marked.
+
 ------ Version 6.5 -----
 Updated 16/03/2017 by Wayne Briggs
 
