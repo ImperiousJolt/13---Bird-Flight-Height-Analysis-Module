@@ -38,7 +38,7 @@ evalin('base','points=[];');
         zoneCheck = birdsList.zone;
         bhList = birdsList.bhList;
         if strcmp(xlsfilename(5:6),zoneCheck)
-            useList = true;
+            useList = false;
         else
             useList = false;
         end
@@ -118,7 +118,7 @@ evalin('base','points=[];');
             
             % Check bird species against a list
             if useList && ~found
-                filter = true;
+                filter = false;
                 for i = 1 : numel(bhList)
                     if strcmpi(bhList{i},bird_input{n,speciesCol})
                         filter = false;

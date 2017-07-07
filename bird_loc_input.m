@@ -130,7 +130,7 @@ else
             
             % Check bird species against a list
             if useList && ~found
-                filter = true;
+                filter = false;
                 for i = 1 : numel(bhList)
                     if strcmpi(bhList{i},bird_input{n,speciesCol})
                         filter = false;
