@@ -1,15 +1,27 @@
-function bird_loc_input_auto_refresh(handles)
-global Birds bird_input fb_input_data xlsfilename xlspathname num_birds original_birds List
+function bird_loc_input(handles)
+global Birds brightness bird_input fb_input_data xlsfilename xlspathname num_birds original_birds List
 
 Birds = [];
 fb_input_data={};
 List = {};
+brightness = 1;
 lp = 1;
 
 %set birdframe to 0;
 evalin('base','birdFrame=0;');
 %define points matrix;
 evalin('base','points=[];');
+
+%get radio button value
+[file, path] = uigetfile({'*.xlsx','Excel Files (*.xlsx)'}, 'Select the excel file', xlspathname );
+if file == 0
+    %create messagebox
+    msgbox('No spreadsheet selected.','No Spreadsheet Selected','help')
+    return
+else
+    
+    xlspathname = path;
+    xlsfilename = file;
     
     set(handles.xlsdir,'string', xlsfilename);
     
@@ -99,7 +111,9 @@ evalin('base','points=[];');
                         if      (strcmp(bird_input{n,reelCol}, Birds{o}.Reel_Number) && ...
                                 (bird_input{n,frameCol} ==  Birds{o}.Frame_Number) && ...
                                 max(bird_input{n,markerCol} ==  Birds{o}.Marker_Number))
-                            found = 1;
+                            
+                            found = 1; %This is the removing birds
+                            
                             if isfield(Birds{o},'er')
                                 markedEr = true;
                                 markedErCode = Birds{o}.er;
@@ -123,6 +137,7 @@ evalin('base','points=[];');
 
                     CompleteBirdsCount = CompleteBirdsCount +1;
             end
+            
             
             % Check bird species against a list
             if useList && ~found
@@ -198,6 +213,7 @@ evalin('base','points=[];');
         fb_input_data(p,:) = {List{ListItems,1}; List{ListItems,2}; List{ListItems,3}; List{ListItems,4}; ...
         List{ListItems,5}; List{ListItems,6}; List{ListItems,7}; List{ListItems,8}};
     end
+    
     
     num_birds = numel(Birds);
     set(handles.bird_loc_table,'data',fb_input_data);

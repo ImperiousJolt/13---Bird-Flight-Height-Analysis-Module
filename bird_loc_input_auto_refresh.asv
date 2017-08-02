@@ -1,10 +1,12 @@
 function bird_loc_input_auto_refresh(handles)
-global Birds bird_input fb_input_data xlsfilename xlspathname num_birds original_birds List
+global Birds bird_input fb_input_data xlsfilename xlspathname num_birds original_birds ListNotComplete ListComplete
 
 Birds = [];
 fb_input_data={};
-List = {};
+ListNotComplete={};
+ListComplete={};
 lp = 1;
+complete = 1;
 
 %set birdframe to 0;
 evalin('base','birdFrame=0;');
@@ -31,7 +33,6 @@ evalin('base','points=[];');
     flightHeightCol = 19; %wayne%
     xCol = 30;
     yCol = 31;
-    CompleteBirdsCount = 1;
     
     checkFile = 'BirdsList.mat';
     if exist(checkFile,'file')
@@ -117,13 +118,6 @@ evalin('base','points=[];');
                 end
             end
             
-            if found
-                List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
-                    'Yes'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
-
-                    CompleteBirdsCount = CompleteBirdsCount +1;
-            end
-            
             % Check bird species against a list
             if useList && ~found
                 filter = false;
@@ -148,7 +142,7 @@ evalin('base','points=[];');
             end
             
             if ~found && ~filter
-%                 p = p + 1;
+                p = p + 1;
                 markerNum = bird_input{n,markerCol};
                
                 flightHeightColumn = bird_input{n,flightHeightCol};
@@ -158,11 +152,18 @@ evalin('base','points=[];');
                     'No'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
                 end %Wayne%
                 
-%                 if strcmp(fb_input_data(p,5),'No')
-%                     List(lp,:) = fb_input_data(p,:);  
-%                 
-%                 lp = lp+1;
-%                 end
+                %Remove measured birds from list
+                if strcmp(fb_input_data(p,5),'No')
+                    ListNotComplete(lp,:) = fb_input_data(p,:);  
+                
+                lp = lp+1;
+                end
+                
+                if strcmp(fb_input_data(p,5),'Yes')
+                    ListComplete(complete,:) = fb_input_data(p,:);  
+                
+                complete = complete+1;
+                end
                 
             end
             
@@ -182,23 +183,24 @@ evalin('base','points=[];');
                 fb_input_data(p,:) = {n; markerNum; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
                     writeEr; bird_input{n,xCol}; bird_input{n,yCol}; 0};
                 
-%                 if strcmp(fb_input_data(p,5),'No')
-%                     List(lp,:) = fb_input_data(p,:);  
-%                 
-%                 lp = lp+1;
-%                 end
+                %If bird data bird completed = no put in list
+                if strcmp(fb_input_data(p,5),'No')
+                    ListNotComplete(lp,:) = fb_input_data(p,:);  
+                
+                lp = lp+1;
+                end
+                
+                if strcmp(fb_input_data(p,5),'Yes')
+                    ListComplete(lp,:) = fb_input_data(p,:);  
+                
+                complete = complete+1;
+                end
             end
             
         end
     end
     
-    for ListItems=1:size(List,1)
-        p = p + 1;
-        
-        fb_input_data(p,:) = {List{ListItems,1}; List{ListItems,2}; List{ListItems,3}; List{ListItems,4}; ...
-        List{ListItems,5}; List{ListItems,6}; List{ListItems,7}; List{ListItems,8}};
-    end
-    
+%     fb_input_data = ListNotComplete;
     num_birds = numel(Birds);
     set(handles.bird_loc_table,'data',fb_input_data);
     save([xlspathname xlsfilename(1:end-5) '.mat'],'Birds');

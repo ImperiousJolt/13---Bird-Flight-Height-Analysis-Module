@@ -43,6 +43,7 @@ else
     flightHeightCol = 19; %wayne%
     xCol = 30;
     yCol = 31;
+    CompleteBirdsCount = 1;
     
     checkFile = 'BirdsList.mat';
     if exist(checkFile,'file')
@@ -110,7 +111,9 @@ else
                         if      (strcmp(bird_input{n,reelCol}, Birds{o}.Reel_Number) && ...
                                 (bird_input{n,frameCol} ==  Birds{o}.Frame_Number) && ...
                                 max(bird_input{n,markerCol} ==  Birds{o}.Marker_Number))
-                            found = 1;
+                            
+                            found = 1; %This is the removing birds
+                            
                             if isfield(Birds{o},'er')
                                 markedEr = true;
                                 markedErCode = Birds{o}.er;
@@ -127,6 +130,14 @@ else
                     o = o + 1;
                 end
             end
+            
+            if found
+                List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
+                    'Yes'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
+
+                    CompleteBirdsCount = CompleteBirdsCount +1;
+            end
+            
             
             % Check bird species against a list
             if useList && ~found
@@ -162,12 +173,6 @@ else
                     'No'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
                 end %Wayne%
                 
-                if strcmp(fb_input_data(p,5),'No')
-                    List(lp,:) = fb_input_data(p,:);  
-                
-                lp = lp+1;
-                end
-                
             end
             
             if markedEr
@@ -186,17 +191,19 @@ else
                 fb_input_data(p,:) = {n; markerNum; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
                     writeEr; bird_input{n,xCol}; bird_input{n,yCol}; 0};
                 
-                if strcmp(fb_input_data(p,5),'No')
-                    List(lp,:) = fb_input_data(p,:);  
-                
-                lp = lp+1;
-                end
             end
             
         end
     end
     
-    fb_input_data = List;
+    for ListItems=1:size(List,1)
+        p = p + 1;
+        
+        fb_input_data(p,:) = {List{ListItems,1}; List{ListItems,2}; List{ListItems,3}; List{ListItems,4}; ...
+        List{ListItems,5}; List{ListItems,6}; List{ListItems,7}; List{ListItems,8}};
+    end
+    
+    
     num_birds = numel(Birds);
     set(handles.bird_loc_table,'data',fb_input_data);
     save([xlspathname xlsfilename(1:end-5) '.mat'],'Birds');
