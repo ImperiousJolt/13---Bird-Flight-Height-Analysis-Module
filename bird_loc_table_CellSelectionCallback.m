@@ -20,6 +20,7 @@ if ~isempty(eventdata.Indices)
             current_reel = fb_input_data{current_row,2};
             assignin('base','current_reel',current_reel);
             
+            
             if fb_input_data{current_row,8} == 0,
                 num_birds = num_birds + 1;
                 bird_no = num_birds;
@@ -27,6 +28,7 @@ if ~isempty(eventdata.Indices)
             else
                 bird_no = fb_input_data{current_row,8};
             end
+            
             
             set(handles.Bird_Number_Field,'String',num2str(current_row));
             

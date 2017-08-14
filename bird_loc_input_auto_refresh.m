@@ -116,13 +116,14 @@ evalin('base','points=[];');
                     o = o + 1;
                 end
             end
-            
+           
             if found
                 List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
                     'Yes'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
 
-                    CompleteBirdsCount = CompleteBirdsCount +1;
+                     CompleteBirdsCount = CompleteBirdsCount +1;
             end
+            
             
             % Check bird species against a list
             if useList && ~found

@@ -43,7 +43,7 @@ else
     flightHeightCol = 19; %wayne%
     xCol = 30;
     yCol = 31;
-    CompleteBirdsCount = 1;
+    CompleteBirdsCount = 0;
     
     checkFile = 'BirdsList.mat';
     if exist(checkFile,'file')
@@ -132,10 +132,10 @@ else
             end
             
             if found
+                CompleteBirdsCount = CompleteBirdsCount +1;
+                
                 List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
                     'Yes'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
-
-                    CompleteBirdsCount = CompleteBirdsCount +1;
             end
             
             
@@ -202,7 +202,6 @@ else
         fb_input_data(p,:) = {List{ListItems,1}; List{ListItems,2}; List{ListItems,3}; List{ListItems,4}; ...
         List{ListItems,5}; List{ListItems,6}; List{ListItems,7}; List{ListItems,8}};
     end
-    
     
     num_birds = numel(Birds);
     set(handles.bird_loc_table,'data',fb_input_data);
