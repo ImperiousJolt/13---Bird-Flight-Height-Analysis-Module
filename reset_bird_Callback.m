@@ -32,7 +32,7 @@ if evalin('base','Confirm_Boolean') == 1
     birdsCount = 0;
     
     for b=1:size(Birds, 2)
-        if ~exist('Birds{bird_no}', 'var')%need to work out how to not delete birds that dont want deleted
+        if ~exist('Birds{bird_no}', 'var')
             if(Birds{b}.Marker_Number == Birds{bird_no}.Marker_Number && Birds{b}.Frame_Number == Birds{bird_no}.Frame_Number)
                 Birds{b} = [];
             end
@@ -42,7 +42,7 @@ if evalin('base','Confirm_Boolean') == 1
                 BirdsTemp{birdsCount} = Birds{b};
             end
             if isempty(Birds{b})
-                break;
+%                 break;
             end
         end
     end
