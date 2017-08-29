@@ -1,5 +1,5 @@
 function bird_loc_table_CellSelectionCallback(hObject, eventdata, handles)
-global Birds fb_input_data bird_no num_birds current_row
+global Birds fb_input_data bird_no num_birds current_row current_marker_no
 
 filename = evalin('base','seqhandles.filename');
 
@@ -36,7 +36,10 @@ if ~isempty(eventdata.Indices)
             Birds{bird_no}.Marker_Number = fb_input_data{current_row,2};
             Birds{bird_no}.Reel_Number = fb_input_data{current_row,3};
             
+            current_marker_no = fb_input_data{current_row,2};
+            
             image_no = fb_input_data{eventdata.Indices(1),eventdata.Indices(2)};
+
             
             % From this text input you can go to any frame on the sequence file.
             pathname = evalin('base','seqhandles.seqdir;');
@@ -46,6 +49,7 @@ if ~isempty(eventdata.Indices)
             clear('base','temp');
             
             set(handles.image_no,'String',image_no);
+
             
             fnum = image_no;
             hold on;
