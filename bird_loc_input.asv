@@ -43,7 +43,7 @@ else
     flightHeightCol = 19; %wayne%
     xCol = 30;
     yCol = 31;
-    CompleteBirdsCount = 1;
+    CompleteBirdsCount = 0;
     
     checkFile = 'BirdsList.mat';
     if exist(checkFile,'file')
@@ -131,12 +131,12 @@ else
                 end
             end
             
-%             if found
-%                 CompleteBirdsCount = CompleteBirdsCount +1;
-%                 
-%                 List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
-%                     'Yes'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
-%             end
+            if found
+                CompleteBirdsCount = CompleteBirdsCount +1;
+                
+                List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
+                    'Yes'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
+            end
             
             
             % Check bird species against a list
@@ -185,11 +185,12 @@ else
                         end
                     end
                 end
-%                 p = p + 1;
-%                 
-%                 markerNum = bird_input{n,markerCol};
-%                 fb_input_data(p,:) = {n; markerNum; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
-%                     writeEr; bird_input{n,xCol}; bird_input{n,yCol}; 0};
+                p = p + 1;
+                
+                markerNum = bird_input{n,markerCol};
+                fb_input_data(p,:) = {n; markerNum; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
+                    writeEr; bird_input{n,xCol}; bird_input{n,yCol}; 0};
+                
             end
             
             if found
