@@ -171,11 +171,11 @@ evalin('base','points=[];');
                         end
                     end
                 end
-                p = p + 1;
-                
-                markerNum = bird_input{n,markerCol};
-                fb_input_data(p,:) = {n; markerNum; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
-                    writeEr; bird_input{n,xCol}; bird_input{n,yCol}; 0};
+%                 p = p + 1;
+%                 
+%                 markerNum = bird_input{n,markerCol};
+%                 fb_input_data(p,:) = {n; markerNum; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
+%                     writeEr; bird_input{n,xCol}; bird_input{n,yCol}; 0};
             end
             
             if found
