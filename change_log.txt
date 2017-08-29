@@ -1,4 +1,10 @@
 ------ Version 7.1 -----
+Updated 29/08/2017 by Wayne Briggs
+
+Bug fix - Fixed markers not working correctly. 
+Bug fix - Fixed Error code birds not going to bottom of list.
+
+------ Version 7.1 -----
 Updated 14/08/2017 by Wayne Briggs
 
 Bug fix - Removed break from loop to stop removal of more than 1 bird.
