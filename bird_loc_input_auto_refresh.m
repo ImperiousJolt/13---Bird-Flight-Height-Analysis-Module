@@ -117,12 +117,12 @@ evalin('base','points=[];');
                 end
             end
            
-            if found
-                List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
-                    'Yes'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
-
-                     CompleteBirdsCount = CompleteBirdsCount +1;
-            end
+%             if found
+%                 List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
+%                     'Yes'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
+% 
+%                      CompleteBirdsCount = CompleteBirdsCount +1;
+%             end
             
             
             % Check bird species against a list
@@ -149,7 +149,7 @@ evalin('base','points=[];');
             end
             
             if ~found && ~filter
-%                 p = p + 1;
+
                 markerNum = bird_input{n,markerCol};
                
                 flightHeightColumn = bird_input{n,flightHeightCol};
@@ -157,13 +157,7 @@ evalin('base','points=[];');
                     p = p + 1;
                    fb_input_data(p,:) = {n; markerNum; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
                     'No'; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
-                end %Wayne%
-                
-%                 if strcmp(fb_input_data(p,5),'No')
-%                     List(lp,:) = fb_input_data(p,:);  
-%                 
-%                 lp = lp+1;
-%                 end
+                end 
                 
             end
             
@@ -182,12 +176,16 @@ evalin('base','points=[];');
                 markerNum = bird_input{n,markerCol};
                 fb_input_data(p,:) = {n; markerNum; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
                     writeEr; bird_input{n,xCol}; bird_input{n,yCol}; 0};
-                
-%                 if strcmp(fb_input_data(p,5),'No')
-%                     List(lp,:) = fb_input_data(p,:);  
-%                 
-%                 lp = lp+1;
-%                 end
+            end
+            
+            if found
+                if markedEr == false
+                   writeEr = 'Yes'; 
+                end
+                List(CompleteBirdsCount,:) = {n; bird_input{n,markerCol}; bird_input{n,reelCol}; bird_input{n,frameCol}; ...
+                    writeEr; bird_input{n,xCol}; bird_input{n,yCol}; 0}; %#ok<*AGROW>
+
+                     CompleteBirdsCount = CompleteBirdsCount +1;
             end
             
         end
