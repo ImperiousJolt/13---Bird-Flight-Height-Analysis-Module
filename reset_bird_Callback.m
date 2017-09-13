@@ -64,6 +64,8 @@ if evalin('base','Confirm_Boolean') == 1
     set(handles.bird_loc_table,'data',fb_input_data);
     set(handles.Bird_Frame_Number_Field,'String',birdFrame);
     
+%     bird_loc_input_auto_refresh(handles);
+    
     % Create mat file after each bird is completed.
     save([xlspathname xlsfilename(1:end-5) '.mat'],'Birds');
     

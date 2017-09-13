@@ -8,7 +8,7 @@ for b = 1:length(Birds)
     try
         if strfind(current_reel,Birds{b}.Reel_Number);
             
-            if(exist('Birds{b}.markedByReflection') && Birds{b}.markedByReflection == true && Birds{b}.Frame_Number == str2double(current_frame)) 
+            if(isfield(Birds{b}, 'markedByReflection') && Birds{b}.markedByReflection == true && Birds{b}.Marker_Number == current_marker_no) 
                     % Plot markers
                     hold on;
                     scatter(Birds{b}.points(1,1),Birds{b}.points(1,2),'og');
