@@ -2,6 +2,12 @@
 Updated 29/08/2017 by Wayne Briggs
 
 Bug fix - Fixed markers not working correctly. 
+Added Feature - More brightness options
+
+------ Version 7.1 -----
+Updated 29/08/2017 by Wayne Briggs
+
+Bug fix - Fixed markers not working correctly. 
 Bug fix - Fixed Error code birds not going to bottom of list.
 
 ------ Version 7.1 -----
