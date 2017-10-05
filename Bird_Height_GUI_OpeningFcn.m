@@ -14,13 +14,13 @@ guidata(hObject, handles);
 % Set the name, version number and date
 moduleName = 'Bird Flight Height Analysis Module';
 moduleVersion = '7.2';
-versionDate = 'Sept 2017';
+versionDate = '2017';
 
 % Update window name, in-app name and copyright date
 version = [moduleName ' v' moduleVersion];
 set(hObject,'Name',version);
 set(handles.text8,'String',version);
-%set(handles.text5,'String',['© HiDef Aerial Surveying Ltd. ' versionDate]);
+%set(handles.text5,'String',['© HiDef - ' versionDate]);
 
 iconPath = 'HiDefIcon.jpg';
 if exist(iconPath,'file')
